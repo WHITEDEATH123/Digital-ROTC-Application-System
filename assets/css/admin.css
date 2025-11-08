@@ -1,0 +1,125 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #232526, #414345);
+  margin: 0;
+  padding: 20px;
+  color: #000000;
+}
+
+.admin-container {
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+  color: #333;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+h1 {
+  text-align: center;
+  color: #006400;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #006699;
+}
+
+/* Scope table styles only to admin container */
+.admin-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.admin-container thead {
+  background: #006400;
+  color: #fff;
+}
+
+.admin-container th,
+.admin-container td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-container tr:hover {
+  background: #f1f1f1;
+}
+
+/* Buttons */
+button {
+  padding: 8px 14px;
+  margin: 2px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.approve-btn {
+  background: #28a745;
+  color: #fff;
+}
+.approve-btn:hover { background: #218838; }
+
+.reject-btn {
+  background: #dc3545;
+  color: #fff;
+}
+.reject-btn:hover { background: #b02a37; }
+
+.view-btn {
+  background: #006400;
+  color: #ffffff;
+}
+.view-btn:hover { background: #004d66; }
+
+#logoutBtn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 30px;
+  font-size: 16px;
+  background: #333;
+  color: #fff;
+  border-radius: 8px;
+}
+#logoutBtn:hover { background: #111; }
+
+.table-container {
+  margin-bottom: 30px;
+  background: #f9f9f9;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.table-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.table-header h2 {
+  margin: 0 0 0 15px;
+  color: #006699;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+

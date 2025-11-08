@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Test</title>
+    <link rel="stylesheet" href="assets/css/logo-styles.css">
+    <link rel="stylesheet" href="assets/css/enroll.css">
+    <link rel="stylesheet" href="assets/css/green-theme.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .navbar {
+            background: linear-gradient(135deg, #2d5016 0%, #4a7c59 100%);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .page-header {
+            background: linear-gradient(135deg, #2d5016 0%, #4a7c59 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Logo Size Test Page</h1>
+    
+    <div class="test-section">
+        <h2>Navbar Logo Test</h2>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <img src="assets/img/jhcsc-logo.png" alt="JHCSC Logo" class="navbar-logo">
+                <div>
+                    <div style="font-size: 1.2rem;">Student Portal</div>
+                    <div style="font-size: 0.8rem; opacity: 0.9;">Digital ROTC System</div>
+                </div>
+            </div>
+        </nav>
+        <p><strong>Expected:</strong> Logo should be 45px height</p>
+        <p><strong>Current size:</strong> <span id="navbar-size">Checking...</span></p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Header Logo Test</h2>
+        <div class="page-header">
+            <div class="header-content">
+                <img src="assets/img/jhcsc-logo.png" alt="JHCSC Logo" class="header-logo">
+                <div class="header-text">
+                    <h2>ROTC Enrollment Form</h2>
+                    <p>Jose Hernandez College of Science and Computing</p>
+                </div>
+            </div>
+        </div>
+        <p><strong>Expected:</strong> Logo should be 60px height</p>
+        <p><strong>Current size:</strong> <span id="header-size">Checking...</span></p>
+    </div>
+    
+    <div class="test-section">
+        <h2>CSS Debug Info</h2>
+        <p><strong>CSS Files Loaded:</strong></p>
+        <ul>
+            <li>logo-styles.css</li>
+            <li>enroll.css</li>
+            <li>green-theme.css</li>
+        </ul>
+        <p><strong>Logo Image Path:</strong> assets/img/jhcsc-logo.png</p>
+    </div>
+
+    <script>
+        // Check actual logo sizes
+        window.onload = function() {
+            const navbarLogo = document.querySelector('.navbar-logo');
+            const headerLogo = document.querySelector('.header-logo');
+            
+            if (navbarLogo) {
+                const navbarHeight = navbarLogo.offsetHeight;
+                document.getElementById('navbar-size').textContent = navbarHeight + 'px height';
+                if (navbarHeight !== 45) {
+                    document.getElementById('navbar-size').style.color = 'red';
+                    document.getElementById('navbar-size').textContent += ' (INCORRECT - should be 45px)';
+                } else {
+                    document.getElementById('navbar-size').style.color = 'green';
+                    document.getElementById('navbar-size').textContent += ' (CORRECT)';
+                }
+            }
+            
+            if (headerLogo) {
+                const headerHeight = headerLogo.offsetHeight;
+                document.getElementById('header-size').textContent = headerHeight + 'px height';
+                if (headerHeight !== 60) {
+                    document.getElementById('header-size').style.color = 'red';
+                    document.getElementById('header-size').textContent += ' (INCORRECT - should be 60px)';
+                } else {
+                    document.getElementById('header-size').style.color = 'green';
+                    document.getElementById('header-size').textContent += ' (CORRECT)';
+                }
+            }
+        };
+    </script>
+</body>
+</html>

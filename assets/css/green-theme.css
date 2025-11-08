@@ -1,0 +1,152 @@
+/* 
+ * Green Theme - Digital ROTC System
+ * Consistent green color scheme across all pages
+ */
+
+/* Color Variables */
+:root {
+  --primary-green: #2d5016;
+  --secondary-green: #4a7c59;
+  --light-green: #66bb6a;
+  --dark-green: #1b5e20;
+  --accent-green: #388e3c;
+  --success-green: #4caf50;
+  --hover-green: rgba(45, 80, 22, 0.1);
+  --shadow-green: rgba(45, 80, 22, 0.3);
+}
+
+/* Primary Backgrounds */
+.navbar,
+.header,
+.certificate-header {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%) !important;
+}
+
+/* Page header should remain white */
+.page-header {
+  background: white !important;
+}
+
+/* Buttons */
+button,
+.btn,
+.btn-primary,
+.btn-submit,
+.btn-filter,
+.btn-export {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%) !important;
+  border-color: var(--primary-green) !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0 4px 15px var(--shadow-green) !important;
+  border-radius: 10px !important;
+  padding: 16px 32px !important;
+}
+
+.btn-student {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%) !important;
+}
+
+.btn-admin {
+  background: linear-gradient(135deg, var(--dark-green) 0%, var(--accent-green) 100%) !important;
+}
+
+/* Hover Effects */
+button:hover,
+.btn:hover,
+.btn-primary:hover,
+.btn-submit:hover,
+.btn-filter:hover,
+.btn-export:hover {
+  box-shadow: 0 8px 25px rgba(45, 80, 22, 0.5) !important;
+  transform: translateY(-3px) !important;
+  background: linear-gradient(135deg, var(--dark-green) 0%, var(--accent-green) 100%) !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Active Effects */
+button:active,
+.btn:active,
+.btn-primary:active,
+.btn-submit:active,
+.btn-filter:active,
+.btn-export:active {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 15px var(--shadow-green) !important;
+}
+
+/* Links */
+a,
+.nav-link,
+.back-link a {
+  color: var(--secondary-green) !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: rgba(255,255,255,0.2) !important;
+}
+
+/* Form Focus States */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--secondary-green) !important;
+  box-shadow: 0 0 0 2px rgba(74, 124, 89, 0.2) !important;
+}
+
+/* Status Badges - Keep existing colors but add green option */
+.status-approved {
+  background: #d4edda !important;
+  color: #155724 !important;
+}
+
+/* Table Headers */
+.table-header {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%) !important;
+}
+
+/* Cards and Containers */
+.stat-number {
+  color: var(--secondary-green) !important;
+}
+
+/* Progress Bars */
+.progress-bar {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%) !important;
+}
+
+/* Borders and Accents */
+.report-title {
+  border-bottom-color: var(--secondary-green) !important;
+}
+
+.feature-item {
+  border-left-color: var(--secondary-green) !important;
+}
+
+/* Login Container Focus */
+.login-container {
+  border-color: rgba(74, 124, 89, 0.3) !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%) !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .navbar,
+  .page-header,
+  .header {
+    background: var(--primary-green) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

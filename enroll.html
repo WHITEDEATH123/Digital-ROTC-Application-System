@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ROTC Enrollment Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h2>Cadet Enrollment Form</h2>
+  <form id="enrollForm" enctype="multipart/form-data">
+
+    <h3>Personal Information</h3>
+    <label>First Name: <input id="fname" required></label><br>
+    <label>Middle Name: <input id="mname" required></label><br>
+    <label>Last Name: <input id="lname" required></label><br>
+    <label>Age: <input id="age" type="number" required></label><br>
+    <label>Religion: <input id="religion" required></label><br>
+    <label>Date of Birth: <input id="dob" type="date" required></label><br>
+    <label>Place of Birth: <input id="pob" required></label><br>
+    <label>Height (cm): <input id="height" required></label><br>
+    <label>Weight (kg): <input id="weight" required></label><br>
+    <label>Complexion: <input id="complexion"></label><br>
+    <label>Blood Type:
+      <select id="bloodType" required>
+        <option value="">Select</option>
+        <option>O</option><option>A</option><option>B</option><option>AB</option>
+      </select>
+    </label><br>
+
+    <h3>Academic Details</h3>
+    <label>Block: <input id="block" required></label><br>
+    <label>Course: <input id="course" required></label><br>
+    <label>Army Branch: <input id="army" required></label><br>
+    <label>Semester: <input id="semester" required></label><br>
+    <label>School Year: <input id="schoolyear" required></label><br>
+    <label>Grade: <input id="grade"></label><br>
+    <label>Remarks: <input id="remarks"></label><br>
+    <label>Advance Course: <input type="checkbox" id="advanceCourse"></label><br>
+
+    <h3>Contact Information</h3>
+    <label>Address: <input id="address" required></label><br>
+    <label>Phone: <input id="phone" required></label><br>
+    <label>Email: <input id="email" type="email" required></label><br>
+
+    <h3>Family Information</h3>
+    <label>Father's Name: <input id="father" required></label><br>
+    <label>Father's Occupation: <input id="foccupation"></label><br>
+    <label>Mother's Name: <input id="mother" required></label><br>
+    <label>Mother's Occupation: <input id="moccupation"></label><br>
+
+    <h3>Emergency Contact</h3>
+    <label>Contact Person: <input id="emergencyPerson" required></label><br>
+    <label>Relationship: <input id="relationship" required></label><br>
+    <label>Contact Number: <input id="emergencyContact" required></label><br>
+
+    <h3>Other Details</h3>
+    <label>Marital Status: <input id="ms" required></label><br>
+    <label>2x2 Photo: <input type="file" id="photo" accept="image/*" required></label>
+    <div id="photoPreview" style="margin-top:10px;"></div><br>
+
+    <button type="submit">Submit Enrollment</button>
+  </form>
+
+  <script src="enroll.js"></script>
+</body>
+</html>

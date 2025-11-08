@@ -1,0 +1,138 @@
+/* Global */
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  margin: 0;
+  color: #102a43;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url('../img/jh.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Topbar */
+.topbar {
+  background: linear-gradient(90deg, #006400, #ffffff);
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+.brand {
+  font-weight: 700;
+  font-size: 18px;
+}
+.actions button {
+  margin-left: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.actions button.danger {
+  background: #ef4444;
+  color: white;
+}
+.actions button:not(.danger) {
+  background: #fff;
+  color: #065f46;
+}
+.actions button:hover {
+  opacity: 0.85;
+}
+
+/* Main container */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 56px); /* full viewport minus topbar */
+  padding: 20px;
+}
+
+/* Card with subtle blur and shadow */
+.card {
+  width: 360px;
+  max-width: 90%;
+  background: rgba(255, 255, 255, 0.85); /* semi-transparent */
+  backdrop-filter: blur(6px); /* subtle blur behind card */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+/* Logo */
+.logo-container {
+  margin-bottom: 12px;
+}
+.logo-container .logo {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+/* Headings */
+h2 {
+  margin: 8px 0 16px 0;
+  font-size: 18px;
+  color: #05b902;
+}
+h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+}
+h4 {
+  margin: 0 0 6px 0;
+  font-size: 14px;
+}
+
+/* Status and remarks boxes */
+.status-row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+  align-items: center;
+}
+.status-box {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  background: #eef2ff;
+  text-align: center;
+}
+.remarks-box {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  background: #fff7ed;
+  border: 1px solid #ffe8cc;
+  text-align: center;
+}
+
+/* Buttons */
+.buttons {
+  margin-top: 18px;
+  text-align: center;
+}
+button.secondary {
+  background: #e2e8f0;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+button.secondary:hover {
+  background: #cbd5e1;
+}
